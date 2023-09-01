@@ -1,4 +1,13 @@
-// import axios from 'axios';
+import axios from 'axios';
 
-// base_URL: 'https://www.themoviedb.org/settings/api';
-// key: '0680db411350b9d223e12287a60e3b59';
+const instance = axios.create({
+  baseURL: 'https://www.themoviedb.org/3/api',
+  params: {
+    key: '0680db411350b9d223e12287a60e3b59',
+    language: 'en-US',
+  },
+});
+export const fetchTrendingMovie = async () => {
+  const { data } = await instance.get('/trending/movie/day');
+  return data;
+};
