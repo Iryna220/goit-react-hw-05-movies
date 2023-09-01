@@ -1,0 +1,24 @@
+nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 8px 0;
+  border-bottom: 1px solid red;
+}
+
+.link {
+  padding: 8px 25px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: darkblue;
+  background-color: aliceblue;
+  outline: darkblue;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.active {
+  composes: link;
+  background-color: red;
+  color: beige;
+}
