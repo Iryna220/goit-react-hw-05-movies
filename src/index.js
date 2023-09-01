@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom/client';
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { App } from 'components/App';
+import App from './components/App';
 import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -11,3 +11,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </BrowserRouter>
   </React.StrictMode>
 );
+
+// basename="/goit-react-hw-05-movies/"
