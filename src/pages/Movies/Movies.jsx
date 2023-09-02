@@ -28,8 +28,8 @@ const Movies = () => {
           toast.error('There are no movies matching your request.');
         }
         setMovies(results);
-      } catch {
-        setError(error.massage);
+      } catch (error) {
+        setError(error.message);
       } finally {
         setLoading(false);
       }
