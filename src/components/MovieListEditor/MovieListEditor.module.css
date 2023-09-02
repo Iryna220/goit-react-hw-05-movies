@@ -2,12 +2,12 @@
   font-size: 25px;
 }
 .linkmovies::marker {
-  color: darkmagenta;
-  font-size: 1.5em;
+  color: blue;
+  font-size: 1.2em;
 }
 .link {
   text-decoration: none;
-  color: black;
+  color: white;
   outline: none;
   padding: 2px 1px 0;
 }

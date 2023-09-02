@@ -3,7 +3,7 @@ nav {
   align-items: center;
   gap: 30px;
   padding: 8px 0;
-  border-bottom: 1px solid red;
+  border-bottom: transparent;
 }
 
 .link {
