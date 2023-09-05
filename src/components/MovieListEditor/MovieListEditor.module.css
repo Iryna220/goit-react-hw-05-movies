@@ -1,20 +1,21 @@
-.linkmovies {
+.linkMovies::marker {
   font-size: 25px;
+  color: red;
 }
-.linkmovies::marker {
-  color: blue;
+.linkMovies {
+  color: antiquewhite;
   font-size: 1.2em;
 }
-.link {
+.linkItem {
   text-decoration: none;
   color: white;
   outline: none;
   padding: 2px 1px 0;
 }
-.link:visited {
-  color: chartreuse;
+.linkItem:visited {
+  background-color: chartreuse;
 }
-.link:hover {
+.linkItem:hover {
   border-bottom: 1px solid;
   color: darkmagenta;
 }

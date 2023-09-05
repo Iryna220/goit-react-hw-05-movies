@@ -6,11 +6,11 @@ const MovieListEditor = ({ movies }) => {
   return (
     <ul>
       {movies.map(({ id, title }) => (
-        <li key={id} className={styles.linkmovies}>
+        <li key={id} className={styles.linkMovies}>
           <Link
             to={`movies/${id}`}
             state={{ from: location }}
-            className={styles.link}
+            className={styles.linkItem}
           ></Link>
           {title}
         </li>
