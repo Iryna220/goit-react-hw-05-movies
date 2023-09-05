@@ -3,7 +3,6 @@
   color: red;
 }
 .linkMovies {
-  color: antiquewhite;
   font-size: 1.2em;
 }
 .linkItem {
@@ -17,5 +16,5 @@
 }
 .linkItem:hover {
   border-bottom: 1px solid;
-  color: darkmagenta;
+  color: rgb(104, 224, 48);
 }
