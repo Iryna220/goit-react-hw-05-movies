@@ -11,8 +11,9 @@ const MovieListEditor = ({ movies }) => {
             to={`/movies/${id}`}
             state={{ from: location }}
             className={styles.linkItem}
-          ></Link>
-          {title}
+          >
+            {title}
+          </Link>
         </li>
       ))}
     </ul>

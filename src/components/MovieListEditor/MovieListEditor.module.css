@@ -13,9 +13,9 @@
   padding: 2px 1px 0;
 }
 .linkItem:visited {
-  background-color: chartreuse;
+  background-color: rgb(0, 21, 255);
 }
 .linkItem:hover {
   border-bottom: 1px solid;
-  color: rgb(104, 224, 48);
+  color: rgb(0, 21, 255);
 }
