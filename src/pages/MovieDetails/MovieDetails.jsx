@@ -53,7 +53,7 @@ const MovieDetails = () => {
               value={{
                 color: 'blue',
                 className: 'global-class-name',
-                size: 22,
+                size: 32,
               }}
             >
               <div>
@@ -63,43 +63,57 @@ const MovieDetails = () => {
             <span>Go back</span>
           </button>
           <div className={styles.container}>
-            <img
-              src={
-                movie.poster_path
-                  ? IMAGE_URL + movie.poster_path
-                  : `https://bitsofco.de/content/images/2018/12/broken-1.png`
-              }
-              alt={movie.original_title}
-              widht="250"
-              className={styles.moviePicture}
-            />
+            <div className={styles.movieItems}>
+              <div className={styles.movieImg}>
+                <img
+                  src={
+                    movie.poster_path
+                      ? IMAGE_URL + movie.poster_path
+                      : `https://bitsofco.de/content/images/2018/12/broken-1.png`
+                  }
+                  alt={movie.original_title}
+                  widht="250"
+                  className={styles.moviePicture}
+                />
+              </div>
+
+              <div>
+                <h2 className={styles.title}>{movie.title}</h2>
+                <p className={styles.titleListItem}>
+                  User Score: {`${movie.vote_average.toFixed(1)}`}
+                </p>
+                <h3 className={styles.titleList}>Overview</h3>
+                <p className={styles.titleListItem}>{`${movie.overview}`}</p>
+                <h3 className={styles.titleList}>Genres</h3>
+                <p className={styles.titleListItem}>{`${movie.genres
+                  .map(genre => genre.name)
+                  .join('/')}`}</p>
+              </div>
+            </div>
+            <hr />
+
+            <div>
+              <h3 className={styles.titleList}>Additional information</h3>
+              <ul className={styles.list}>
+                <li>
+                  <Link className={styles.listItem} to="cast" state={{ from }}>
+                    Cast
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className={styles.listItem}
+                    to="reviews"
+                    state={{ from }}
+                  >
+                    Reviews
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <hr />
+            <Outlet />
           </div>
-          <div>
-            <h2 className={styles.title}>{movie.title}</h2>
-            <p>User Score: {`${movie.vote_average.toFixed(1)}`}</p>
-            <h3>Overview</h3>
-            <p>{`${movie.overview}`}</p>
-            <h3>Genres</h3>
-            <p>{`${movie.genres.map(genre => genre.name).join('/')}`}</p>
-          </div>
-          <hr />
-          <div>
-            <h3>Additional information</h3>
-            <ul className={styles.list}>
-              <li>
-                <Link className={styles.listItem} to="cast" state={{ from }}>
-                  Cast
-                </Link>
-              </li>
-              <li>
-                <Link className={styles.listItem} to="reviews" state={{ from }}>
-                  Reviews
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <hr />
-          <Outlet />
         </>
       )}
     </>
