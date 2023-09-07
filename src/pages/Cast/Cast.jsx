@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchMovieCasts, IMAGE_URL } from 'service/api';
 import Loader from 'components/Loader/Loader';
+import styles from './Cast.module.css';
 
 const Cast = () => {
   const [actors, setActors] = useState([]);
@@ -28,10 +29,11 @@ const Cast = () => {
     <>
       {loading && <Loader />}
       {error && <p>Something goes wrong</p>}
-      <ul>
+      <ul className={styles.list}>
         {actors.map(actor => (
-          <li key={actor.id}>
+          <li className={styles.listItem} key={actor.id}>
             <img
+              className={styles.listImg}
               width="200px"
               src={
                 actor.profile_path
@@ -40,7 +42,7 @@ const Cast = () => {
               }
               alt={actor.original_name}
             />
-            <div>
+            <div className={styles.extraInfo}>
               <p>{actor.name}</p>
               <p>Character: {actor.character}</p>
             </div>
