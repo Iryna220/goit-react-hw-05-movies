@@ -1,0 +1,23 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
+  gap: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.listItem {
+  padding: 10px;
+  border: 2px solid brown;
+  color: aliceblue;
+  font-size: 20px;
+  font-weight: 400;
+}
+.listDescribe {
+  line-height: 1.55;
+  text-indent: 30px;
+  text-align: justify;
+}
