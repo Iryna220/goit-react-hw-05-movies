@@ -38,7 +38,7 @@ const Cast = () => {
               src={
                 actor.profile_path
                   ? IMAGE_URL + actor.profile_path
-                  : `https://bitsofco.de/content/images/2018/12/broken-1.png`
+                  : `https://fakeimg.pl/200x200/8c7d7d/de1414?text=No+image&font=lobster`
               }
               alt={actor.original_name}
             />

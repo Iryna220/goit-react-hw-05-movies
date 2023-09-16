@@ -69,7 +69,7 @@ const MovieDetails = () => {
                   src={
                     movie.poster_path
                       ? IMAGE_URL + movie.poster_path
-                      : `https://bitsofco.de/content/images/2018/12/broken-1.png`
+                      : `https://fakeimg.pl/200x200/8c7d7d/de1414?text=No+image&font=lobster`
                   }
                   alt={movie.original_title}
                   widht="250"
